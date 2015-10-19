@@ -13,7 +13,7 @@ import android.widget.RemoteViews;
 import barqsoft.footballscores.MainActivity;
 import barqsoft.footballscores.R;
 import barqsoft.footballscores.Utilies;
-import barqsoft.footballscores.scoresAdapter;
+import barqsoft.footballscores.ScoresAdapter;
 
 /**
  * Created by Kevin on 10/11/2015.
@@ -41,13 +41,13 @@ public class FootballScoresWidgetIntentService extends IntentService {
         // Extract the data from the Cursor
 //        int weatherId = data.getInt(INDEX_WEATHER_ID);
 
-        String league = latest.getString(scoresAdapter.COL_LEAGUE);
-        String homeTeam = latest.getString(scoresAdapter.COL_HOME);
-        int homeTeamScore = latest.getInt(scoresAdapter.COL_HOME_GOALS);
-        String awayTeam = latest.getString(scoresAdapter.COL_AWAY);
-        int awayTeamScore = latest.getInt(scoresAdapter.COL_AWAY_GOALS);
-        int gameId = latest.getInt(scoresAdapter.COL_ID);
-        String gameTime = latest.getString(scoresAdapter.COL_MATCHTIME);
+        String league = latest.getString(ScoresAdapter.COL_LEAGUE);
+        String homeTeam = latest.getString(ScoresAdapter.COL_HOME);
+        int homeTeamScore = latest.getInt(ScoresAdapter.COL_HOME_GOALS);
+        String awayTeam = latest.getString(ScoresAdapter.COL_AWAY);
+        int awayTeamScore = latest.getInt(ScoresAdapter.COL_AWAY_GOALS);
+        int gameId = latest.getInt(ScoresAdapter.COL_ID);
+        String gameTime = latest.getString(ScoresAdapter.COL_MATCHTIME);
         latest.close();
 
         Log.v(LOG_TAG, "League: " + league + " " + awayTeam + " (" + awayTeamScore + ") @ " +

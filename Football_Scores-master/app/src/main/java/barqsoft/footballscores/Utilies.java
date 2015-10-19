@@ -4,7 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
 
-import barqsoft.footballscores.service.myFetchService;
+import barqsoft.footballscores.service.MyFetchService;
 
 /**
  * Created by yehya khaled on 3/3/2015.
@@ -124,7 +124,7 @@ public class Utilies
     }
 
     public static Cursor getLatestScoresCursor (Context context) {
-        Intent service_start = new Intent(context, myFetchService.class);
+        Intent service_start = new Intent(context, MyFetchService.class);
         context.startService(service_start);
 
         Cursor latest = context.getContentResolver().query(DatabaseContract.scores_table
